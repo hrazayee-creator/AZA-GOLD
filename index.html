@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="AZA GOLD — سامانه مدیریت طلافروشی">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>AZA GOLD | مدیریت طلافروشی</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A<span>G</span></div>
+        <div><div class="brand-name">AZA <b>GOLD</b></div><small>مدیریت هوشمند طلافروشی</small></div>
+      </div>
+      <div class="store-card">
+        <div class="store-avatar">ط</div>
+        <div><strong>فروشگاه من</strong><small>شعبه اصلی</small></div>
+        <span class="online-dot" title="نمایش آزمایشی"></span>
+      </div>
+      <nav class="nav">
+        <p class="nav-label">منوی اصلی</p>
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> داشبورد</button>
+        <button class="nav-item" data-page="sales"><span>▤</span> فروش و فاکتورها</button>
+        <button class="nav-item" data-page="inventory"><span>◈</span> انبار و موجودی</button>
+        <button class="nav-item" data-page="customers"><span>♙</span> مشتریان</button>
+        <button class="nav-item" data-page="debtors"><span>◉</span> مشتریان بدهکار</button>
+        <button class="nav-item" data-page="purchases"><span>⇄</span> خرید طلا</button>
+        <button class="nav-item" data-page="cash"><span>▣</span> صندوق و حسابداری</button>
+        <button class="nav-item" data-page="reports"><span>▥</span> گزارش‌ها</button>
+        <p class="nav-label">تنظیمات</p>
+        <button class="nav-item" data-page="settings"><span>⚙</span> تنظیمات برنامه</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="security-icon">✦</div>
+        <div><strong>محیط آزمایشی</strong><small>اطلاعات نمونه است؛ هنوز به سرور وصل نیست.</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو">☰</button>
+        <div class="breadcrumb"><span>AZA GOLD</span><i>/</i><strong id="pageTitle">داشبورد</strong></div>
+        <div class="top-actions">
+          <div class="date-chip"><span>◷</span><span id="todayDate">امروز</span></div>
+          <button class="icon-btn notification" aria-label="اعلان‌ها">♧<i></i></button>
+          <div class="profile"><div class="profile-avatar">م</div><div><strong>مدیر فروشگاه</strong><small>دسترسی مدیر</small></div><span class="chevron">⌄</span></div>
+        </div>
+      </header>
+
+      <section class="page-content" id="dashboardPage">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> پنل مدیریت فروشگاه</div>
+            <h1>خوش آمدید <span class="gold-text">مدیر عزیز</span></h1>
+            <p class="muted">نمای کلی وضعیت فروشگاه شما در یک نگاه.</p>
+          </div>
+          <button class="primary-btn" id="newInvoice"><span>＋</span> صدور فاکتور جدید</button>
+        </div>
+
+        <div class="notice">
+          <span class="notice-icon">ⓘ</span>
+          <div><strong>نسخه نمایشی AZA GOLD</strong><p>اعداد و کالاها نمونه هستند. برای استفاده واقعی باید سرور، پایگاه داده، احراز هویت و اتصال‌های قانونی پیکربندی شوند.</p></div>
+          <button class="notice-close" id="closeNotice" aria-label="بستن">×</button>
+        </div>
+
+        <div class="section-heading">
+          <div><h2>خلاصه عملکرد</h2><p>آمار نمونه برای نمایش طراحی داشبورد</p></div>
+          <button class="outline-btn" id="periodButton">◷ امروز <span>⌄</span></button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><div class="stat-icon gold-bg">↗</div><span class="stat-label">فروش امروز</span><span class="stat-menu">•••</span></div>
+            <div class="stat-value">۱۲۸,۴۵۰,۰۰۰ <small>تومان</small></div>
+            <div class="stat-bottom"><span class="trend up">↗ ۱۲.۸٪</span><span>نسبت به روز قبل</span></div>
+            <div class="sparkline"><svg viewBox="0 0 180 32" preserveAspectRatio="none"><path d="M0 26 C16 24 17 15 30 19 S48 29 62 16 S84 20 98 10 S118 19 133 9 S156 14 180 2" /></svg></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><div class="stat-icon gray-bg">◈</div><span class="stat-label">موجودی طلای خالص</span><span class="stat-menu">•••</span></div>
+            <div class="stat-value">۲,۴۸۶.۷۵ <small>گرم</small></div>
+            <div class="stat-bottom"><span class="neutral-tag">۱۸ عیار</span><span>موجودی ثبت‌شده نمونه</span></div>
+            <div class="mini-bars"><i style="height:35%"></i><i style="height:55%"></i><i style="height:42%"></i><i style="height:75%"></i><i style="height:60%"></i><i style="height:88%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:82%"></i><i style="height:94%"></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><div class="stat-icon green-bg">♙</div><span class="stat-label">مشتریان فعال</span><span class="stat-menu">•••</span></div>
+            <div class="stat-value">۳۸۶ <small>نفر</small></div>
+            <div class="stat-bottom"><span class="trend up">+۱۸</span><span>مشتری جدید این ماه</span></div>
+            <div class="avatar-stack"><span>ع</span><span>م</span><span>س</span><span>ن</span><em>+۳۸۲</em></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><div class="stat-icon purple-bg">▤</div><span class="stat-label">فاکتورهای امروز</span><span class="stat-menu">•••</span></div>
+            <div class="stat-value">۲۴ <small>فاکتور</small></div>
+            <div class="stat-bottom"><span class="trend up">+۶.۲٪</span><span>نسبت به روز قبل</span></div>
+            <div class="invoice-bars"><i style="height:40%"></i><i style="height:70%"></i><i style="height:48%"></i><i style="height:85%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:78%"></i><i style="height:100%"></i><i style="height:65%"></i><i style="height:88%"></i><i style="height:72%"></i><i style="height:92%"></i></div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="panel sales-panel">
+            <div class="panel-head"><div><h3>روند فروش</h3><p>مقایسه فروش در بازه انتخابی</p></div><button class="select-like" id="chartPeriod">۷ روز گذشته⌄</button></div>
+            <div class="chart-legend"><span><i class="legend-dot"></i> فروش (میلیون تومان)</span><span class="legend-note">داده نمایشی</span></div>
+            <div class="chart-wrap">
+              <div class="y-labels"><span>۱۵۰</span><span>۱۲۰</span><span>۹۰</span><span>۶۰</span><span>۳۰</span><span>۰</span></div>
+              <svg class="sales-chart" viewBox="0 0 600 220" preserveAspectRatio="none" aria-label="نمودار نمایشی فروش">
+                <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#d7b45a" stop-opacity=".28"/><stop offset="100%" stop-color="#d7b45a" stop-opacity="0"/></linearGradient></defs>
+                <g class="grid-lines"><path d="M0 10 H600 M0 50 H600 M0 90 H600 M0 130 H600 M0 170 H600 M0 210 H600"/></g>
+                <path class="chart-area" d="M0 168 C30 158 38 145 65 151 S110 130 135 140 S175 105 200 120 S240 80 265 103 S310 92 335 100 S375 54 400 73 S440 45 465 64 S510 30 535 46 S570 22 600 12 L600 210 L0 210 Z"/>
+                <path class="chart-line" d="M0 168 C30 158 38 145 65 151 S110 130 135 140 S175 105 200 120 S240 80 265 103 S310 92 335 100 S375 54 400 73 S440 45 465 64 S510 30 535 46 S570 22 600 12"/>
+                <circle cx="400" cy="73" r="4.5" class="chart-point"/><circle cx="600" cy="12" r="4.5" class="chart-point"/>
+              </svg>
+            </div>
+            <div class="x-labels"><span>شنبه</span><span>یکشنبه</span><span>دوشنبه</span><span>سه‌شنبه</span><span>چهارشنبه</span><span>پنجشنبه</span><span>جمعه</span></div>
+          </section>
+
+          <section class="panel quick-panel">
+            <div class="panel-head"><div><h3>دسترسی سریع</h3><p>کارهای پرکاربرد فروشگاه</p></div><span class="sparkle">✦</span></div>
+            <div class="quick-grid">
+              <button class="quick-action" data-action="invoice"><span class="quick-icon q-gold">＋</span><strong>فاکتور جدید</strong><small>ثبت فروش طلا</small></button>
+              <button class="quick-action" data-action="product"><span class="quick-icon q-gray">◈</span><strong>افزودن کالا</strong><small>ثبت در انبار</small></button>
+              <button class="quick-action" data-action="customer"><span class="quick-icon q-green">♙</span><strong>مشتری جدید</strong><small>ایجاد پرونده</small></button>
+              <button class="quick-action" data-action="payment"><span class="quick-icon q-purple">⇄</span><strong>ثبت پرداخت</strong><small>دریافت یا پرداخت</small></button>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel transactions-panel">
+          <div class="panel-head transaction-head"><div><h3>آخرین فاکتورها</h3><p>آخرین تراکنش‌های ثبت‌شده در محیط نمایشی</p></div><button class="text-btn" id="viewAll">مشاهده همه <span>←</span></button></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>شماره فاکتور</th><th>مشتری</th><th>تاریخ</th><th>نوع معامله</th><th>مبلغ نهایی</th><th>وضعیت</th><th></th></tr></thead>
+              <tbody>
+                <tr><td><strong class="invoice-id">#AZ-1405-024</strong></td><td><div class="customer-cell"><span class="table-avatar av1">م</span><span>مریم احمدی</span></div></td><td>۱۴۰۵/۰۷/۲۶</td><td><span class="type-label">فروش مصنوعات</span></td><td class="amount">۴۸,۷۵۰,۰۰۰ تومان</td><td><span class="status paid">تسویه‌شده</span></td><td><button class="more-btn">•••</button></td></tr>
+                <tr><td><strong class="invoice-id">#AZ-1405-023</strong></td><td><div class="customer-cell"><span class="table-avatar av2">ع</span><span>علی رضایی</span></div></td><td>۱۴۰۵/۰۷/۲۶</td><td><span class="type-label">فروش سکه</span></td><td class="amount">۳۲,۲۰۰,۰۰۰ تومان</td><td><span class="status pending">بخشی پرداخت‌شده</span></td><td><button class="more-btn">•••</button></td></tr>
+                <tr><td><strong class="invoice-id">#AZ-1405-022</strong></td><td><div class="customer-cell"><span class="table-avatar av3">ن</span><span>نگار کریمی</span></div></td><td>۱۴۰۵/۰۷/۲۵</td><td><span class="type-label">فروش مصنوعات</span></td><td class="amount">۱۸,۶۰۰,۰۰۰ تومان</td><td><span class="status paid">تسویه‌شده</span></td><td><button class="more-btn">•••</button></td></tr>
+                <tr><td><strong class="invoice-id">#AZ-1405-021</strong></td><td><div class="customer-cell"><span class="table-avatar av4">ح</span><span>حسین محمدی</span></div></td><td>۱۴۰۵/۰۷/۲۵</td><td><span class="type-label">خرید از مشتری</span></td><td class="amount">۲۷,۹۰۰,۰۰۰ تومان</td><td><span class="status review">در انتظار بررسی</span></td><td><button class="more-btn">•••</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="footer"><span>© ۱۴۰۵ AZA GOLD</span><span><i class="footer-dot"></i> نسخه طراحی اولیه · اتصال سرور در مرحله بعد</span></footer>
+      </section>
+
+      <section class="page-content secondary-page hidden" id="secondaryPage">
+        <div class="welcome-row"><div><div class="eyebrow"><span class="eyebrow-line"></span> بخش مدیریت</div><h1 id="secondaryHeading">فروش و فاکتورها</h1><p class="muted" id="secondaryDescription">مدیریت اطلاعات فروشگاه</p></div><button class="primary-btn" id="secondaryAction">＋ ثبت مورد جدید</button></div>
+        <div class="panel empty-panel"><div class="empty-icon">✦</div><h2 id="emptyTitle">این بخش آماده توسعه است</h2><p id="emptyDescription">در مرحله بعد فرم‌ها، فیلدها و اتصال به پایگاه داده برای این بخش پیاده‌سازی می‌شود.</p><button class="outline-btn" id="backDashboard">بازگشت به داشبورد</button></div>
+      </section>
+    </main>
+  </div>
+
+
+      <section class="page-content secondary-page hidden" id="debtorsPage">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> پیگیری مطالبات</div><h1>مشتریان <span class="gold-text">بدهکار</span></h1><p class="muted">مانده بدهی مشتریان را ببینید و با یک لمس تماس بگیرید.</p></div>
+          <button class="primary-btn" id="exportDebtors">↓ خروجی فهرست</button>
+        </div>
+        <div class="stats-grid debtor-stats">
+          <article class="stat-card"><div class="stat-top"><div class="stat-icon gold-bg">ت</div><span class="stat-label">مجموع مطالبات</span></div><div class="stat-value">۱۸۶,۴۵۰,۰۰۰ <small>تومان</small></div><div class="stat-bottom">مجموع مانده بدهی نمونه</div></article>
+          <article class="stat-card"><div class="stat-top"><div class="stat-icon green-bg">♙</div><span class="stat-label">مشتریان بدهکار</span></div><div class="stat-value">۱۲ <small>نفر</small></div><div class="stat-bottom">اطلاعات نمایشی</div></article>
+          <article class="stat-card"><div class="stat-top"><div class="stat-icon purple-bg">◷</div><span class="stat-label">سررسید گذشته</span></div><div class="stat-value">۴ <small>نفر</small></div><div class="stat-bottom">نیازمند پیگیری</div></article>
+          <article class="stat-card"><div class="stat-top"><div class="stat-icon gray-bg">✓</div><span class="stat-label">وضعیت داده‌ها</span></div><div class="stat-value">نمونه</div><div class="stat-bottom">هنوز به سرور متصل نیست</div></article>
+        </div>
+        <section class="panel debtors-panel">
+          <div class="panel-head"><div><h3>فهرست پیگیری بدهی‌ها</h3><p>برای تماس مستقیم، دکمه تماس را بزنید.</p></div><input id="debtorSearch" class="search-input" placeholder="جست‌وجوی نام یا شماره..." aria-label="جست‌وجوی بدهکار"></div>
+          <div class="table-scroll">
+            <table id="debtorsTable">
+              <thead><tr><th>مشتری</th><th>شماره تماس</th><th>مانده بدهی</th><th>آخرین خرید</th><th>سررسید</th><th>وضعیت</th><th>اقدام</th></tr></thead>
+              <tbody>
+                <tr><td><div class="customer-cell"><span class="table-avatar av1">م</span><strong>مریم احمدی</strong></div></td><td dir="ltr">09121234567</td><td class="amount">۱۲,۵۰۰,۰۰۰ تومان</td><td>۱۴۰۵/۰۷/۲۰</td><td>۱۴۰۵/۰۷/۲۵</td><td><span class="status pending">۵ روز گذشته</span></td><td><a class="call-btn" href="tel:09121234567">☎ تماس</a></td></tr>
+                <tr><td><div class="customer-cell"><span class="table-avatar av2">ع</span><strong>علی رضایی</strong></div></td><td dir="ltr">09129876543</td><td class="amount">۸,۷۵۰,۰۰۰ تومان</td><td>۱۴۰۵/۰۷/۲۳</td><td>۱۴۰۵/۰۸/۰۱</td><td><span class="status paid">مهلت باقی است</span></td><td><a class="call-btn" href="tel:09129876543">☎ تماس</a></td></tr>
+                <tr><td><div class="customer-cell"><span class="table-avatar av3">ن</span><strong>نگار کریمی</strong></div></td><td dir="ltr">09123456789</td><td class="amount">۲۱,۲۰۰,۰۰۰ تومان</td><td>۱۴۰۵/۰۷/۱۵</td><td>۱۴۰۵/۰۷/۲۲</td><td><span class="status review">۸ روز گذشته</span></td><td><a class="call-btn" href="tel:09123456789">☎ تماس</a></td></tr>
+                <tr><td><div class="customer-cell"><span class="table-avatar av4">ح</span><strong>حسین محمدی</strong></div></td><td dir="ltr">09121112233</td><td class="amount">۴,۰۰۰,۰۰۰ تومان</td><td>۱۴۰۵/۰۷/۲۴</td><td>۱۴۰۵/۰۸/۰۵</td><td><span class="status paid">مهلت باقی است</span></td><td><a class="call-btn" href="tel:09121112233">☎ تماس</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-footnote">شماره‌ها و مبالغ این نسخه نمونه هستند. در نسخه متصل به سرور، این فهرست از حساب مشتریان خوانده می‌شود.</p>
+        </section>
+      </section>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><span class="eyebrow">AZA GOLD</span><h2 id="modalTitle">صدور فاکتور جدید</h2></div><button class="icon-btn" id="closeModal" aria-label="بستن">×</button></div>
+      <div class="demo-warning">این فرم در نسخه فعلی نمایشی است و اطلاعات در سرور ذخیره نمی‌شود.</div>
+      <form id="invoiceForm">
+        <div class="form-grid">
+          <label>نام مشتری<input name="customer" required placeholder="نام و نام خانوادگی"></label>
+          <label>نوع معامله<select name="kind"><option>فروش مصنوعات طلا</option><option>فروش سکه</option><option>خرید طلا از مشتری</option><option>فروش طلای آب‌شده</option></select></label>
+          <label>وزن خالص (گرم)<input name="weight" type="number" min="0" step="0.001" required placeholder="مثلاً 5.250"></label>
+          <label>عیار<select name="purity"><option>۱۸ عیار</option><option>۲۴ عیار</option><option>عیار دیگر</option></select></label>
+          <label>قیمت پایه هر گرم (تومان)<input name="price" type="number" min="0" required placeholder="قیمت را وارد کنید"></label>
+          <label>اجرت و هزینه‌ها (تومان)<input name="wage" type="number" min="0" value="0"></label>
+          <label>سود فروشنده (تومان)<input name="profit" type="number" min="0" value="0"></label>
+          <label>مالیات (تومان)<input name="tax" type="number" min="0" value="0"><small>بر اساس مقررات جاری و اقلام مشمول محاسبه شود.</small></label>
+        </div>
+        <div class="invoice-total"><span>جمع تقریبی فاکتور</span><strong id="invoiceTotal">۰ تومان</strong></div>
+        <div class="modal-actions"><button type="button" class="outline-btn" id="cancelModal">انصراف</button><button type="submit" class="primary-btn">نمایش پیش‌فاکتور</button></div>
+      </form>
+      <div class="preview-result hidden" id="previewResult"></div>
+    </section>
+  </div>
+  <div class="toast hidden" id="toast"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
